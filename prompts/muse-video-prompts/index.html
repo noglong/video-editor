@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muse Video Prompts</title>
+<meta name="description" content="205 Muse Video prompts, each quoted in full, credited to its creator and linked to the original post. Search, filter and copy.">
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1d1d1f;--muted:#6b6b70;--line:#e4e2dc;--chip:#eeece6;--chip-on:#1d1d1f;--chip-on-ink:#fff;--accent:#2f6fde;--code:#f3f2ee;--media:#e9e7e1}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#141416;--card:#1c1c1f;--ink:#ececee;--muted:#9a9aa2;--line:#2c2c31;--chip:#26262b;--chip-on:#ececee;--chip-on-ink:#141416;--accent:#7aa7ff;--code:#202024;--media:#232327}}
+:root[data-theme="dark"]{--bg:#141416;--card:#1c1c1f;--ink:#ececee;--muted:#9a9aa2;--line:#2c2c31;--chip:#26262b;--chip-on:#ececee;--chip-on-ink:#141416;--accent:#7aa7ff;--code:#202024;--media:#232327}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 16px 80px}
+h1{font-size:24px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 6px;font-size:14px}
+.top{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 10px;border-bottom:1px solid var(--line);margin:14px 0 16px}
+input[type=search]{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{border:0;background:var(--chip);color:var(--ink);padding:5px 10px;border-radius:999px;font-size:13px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--chip-on);color:var(--chip-on-ink)}
+.chip .n{opacity:.6;margin-left:4px}
+.lbl{font-size:12px;color:var(--muted);margin-right:2px;align-self:center}
+.count{font-size:13px;color:var(--muted);margin:0 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;overflow:hidden}
+.media{margin:-16px -16px 12px;background:var(--media);display:flex;justify-content:center;align-items:center;min-height:48px}
+.media img{display:block;max-width:100%;max-height:300px;object-fit:contain}
+.media video{display:block;width:100%;max-height:520px;background:#000}
+.media .ph{color:var(--muted);font-size:13px;padding:14px}
+.title{font-size:16px;font-weight:600;margin:0}
+.tzh{font-size:14px;color:var(--muted);margin:2px 0 0}
+.id{color:var(--muted);font-weight:400;font-size:13px;margin-right:6px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;font-size:12px;color:var(--muted)}
+.tag{background:var(--chip);padding:1px 8px;border-radius:6px}
+.blk{margin-top:10px}
+.blk .bl{font-size:12px;color:var(--muted);margin:0 0 4px}
+pre{background:var(--code);border-radius:10px;padding:12px;margin:0;white-space:pre-wrap;word-break:break-word;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;max-height:220px;overflow:hidden}
+.card.open pre{max-height:none}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
+button.b{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:5px 12px;font-size:13px;cursor:pointer}
+button.b.primary{background:var(--chip-on);color:var(--chip-on-ink);border-color:var(--chip-on)}
+.acts a{font-size:13px}
+.empty{color:var(--muted);text-align:center;padding:40px 0}
+.more{display:block;margin:16px auto 0}
+.theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer;white-space:nowrap}
+footer{margin-top:28px;font-size:13px;color:var(--muted)}
+@media (max-width:600px){.top{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div>
+    <h1>Muse Video Prompts · Muse Video 提示词</h1>
+    <p class="sub">205 Muse Video prompts creators posted on X after running them in Meta's Muse, each quoted in full, credited and linked to the original post. 每条都逐字全文收录、注明作者并附原帖链接。</p>
+    <p class="sub"><a href="https://github.com/apimodels/muse-video-prompts">GitHub repo</a> · <a href="https://apimodels.app/muse-video-prompts">On apimodels.app 在线版</a> · <a href="https://apimodels.app/models/muse-video">Muse Video API</a> · Curated by <a href="https://apimodels.app">apimodels.app</a></p>
+  </div><button class="theme" id="theme">Dark / Light</button></div>
+  <div class="bar">
+    <input type="search" id="q" placeholder="Search 搜索：地铁、POV、groove、旗袍、vlog …">
+    <div class="chips" id="cats"></div>
+    <div class="chips" id="more"></div>
+  </div>
+  <p class="count" id="count">Loading 加载中…</p>
+  <div id="list"></div>
+  <footer>Prompts belong to their creators and are quoted in full; clips are linked from where the creators posted them, not re-hosted. 提示词版权归各作者，逐字全文收录；视频只链接原帖所在的地址，不转存。 To have a prompt removed or a credit corrected, open an issue on <a href="https://github.com/apimodels/muse-video-prompts/issues">GitHub</a>.</footer>
+</div>
+<script>
+const MEDIA = "video";
+const REPO = "https://github.com/apimodels/muse-video-prompts";
+const st = { q: '', c: 'all', l: 'all', s: 'all', shown: 60 };
+let DATA = [];
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+const sec = s => s == null ? '' : (s >= 60 && Number.isInteger(s / 60) ? s / 60 + ' min' : s + ' s');
+function count(f) { const m = new Map(); DATA.forEach(d => { const v = f(d); m.set(v, (m.get(v) || 0) + 1); }); return [...m].sort((x, y) => y[1] - x[1]); }
+function row(el, key, items, label, show) {
+  el.insertAdjacentHTML('beforeend', (label ? '<span class="lbl">' + label + '</span>' : '') + [['all', DATA.length], ...items].map(([v, n]) =>
+    '<button class="chip" data-k="' + key + '" data-v="' + esc(v) + '" aria-pressed="' + (st[key] === v) + '">' + esc(v === 'all' ? 'All 全部' : (show ? show(v) : v)) + '<span class="n">' + n + '</span></button>').join(''));
+}
+function blocks(d) {
+  const b = [{ label: d.text_alt && d.text_alt.length ? 'Prompt · ' + d.language : 'Prompt', text: d.text }];
+  (d.text_alt || []).forEach(t => b.push({ label: 'Prompt · ' + t.language, text: t.text }));
+  (d.ref_prompts || []).forEach(r => b.push({ label: r.label, text: r.text }));
+  return b;
+}
+function init() {
+  const catName = {}; DATA.forEach(d => { if (d.category) catName[d.category] = d.category_en + ' · ' + d.category_zh; });
+  const cats = []; DATA.forEach(d => { if (d.category && !cats.includes(d.category)) cats.push(d.category); });
+  if (cats.length) row($('#cats'), 'c', cats.map(c => [c, DATA.filter(d => d.category === c).length]), '', v => catName[v]);
+  row($('#more'), 'l', count(d => d.language), 'Language', null);
+  row($('#more'), 's', count(d => d.platform), 'Source', null);
+  render();
+}
+document.addEventListener('click', e => {
+  const c = e.target.closest('.chip');
+  if (c) { st[c.dataset.k] = c.dataset.v; st.shown = 60; document.querySelectorAll('.chip[data-k="' + c.dataset.k + '"]').forEach(x => x.setAttribute('aria-pressed', x === c)); render(); return; }
+  if (e.target.id === 'more-btn') { st.shown += 60; render(); return; }
+  const b = e.target.closest('button.b'); if (!b) return;
+  const card = b.closest('.card'); const d = DATA.find(x => x.id === card.dataset.id);
+  if (b.dataset.act === 'copy') {
+    const t = blocks(d)[+b.dataset.i].text;
+    const done = () => { const o = b.textContent; b.textContent = 'Copied 已复制'; setTimeout(() => b.textContent = o, 1400); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, () => fallback(t, done)); else fallback(t, done);
+  } else if (b.dataset.act === 'play') {
+    const m = card.querySelector('.media');
+    m.innerHTML = '<video controls autoplay playsinline preload="metadata"' + (d.poster_url ? ' poster="' + esc(d.poster_url) + '"' : '') + ' src="' + esc(d.video_url) + '"></video>';
+    b.remove();
+  } else { card.classList.toggle('open'); b.textContent = card.classList.contains('open') ? 'Collapse 收起' : 'Expand 展开'; }
+});
+function fallback(t, done) { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); done(); } catch (e) {} ta.remove(); }
+$('#q').addEventListener('input', e => { st.q = e.target.value.trim().toLowerCase(); st.shown = 60; render(); });
+function media(d) {
+  if (MEDIA === 'image' && d.poster_url) return '<div class="media"><a href="' + esc(d.poster_url) + '" target="_blank" rel="noopener"><img loading="lazy" referrerpolicy="no-referrer" src="' + esc(d.poster_url) + '" alt="' + esc(d.title_en) + '"></a></div>';
+  if (d.poster_url) return '<div class="media"><img loading="lazy" referrerpolicy="no-referrer" src="' + esc(d.poster_url) + '" alt="' + esc(d.title_en) + '"></div>';
+  if (d.video_url) return '<div class="media"><span class="ph">Clip linked below 成片见下方链接</span></div>';
+  return '';
+}
+function card(d) {
+  const bs = blocks(d); const long = bs.some(x => x.text.length > 420) || bs.length > 1;
+  return '<div class="card" data-id="' + d.id + '">' + media(d)
+    + '<p class="title"><span class="id">' + d.id + '</span>' + esc(d.title_en) + '</p>' + (d.title_zh ? '<p class="tzh">' + esc(d.title_zh) + '</p>' : '')
+    + '<div class="meta">' + (d.category ? '<span class="tag">' + esc(d.category_en) + ' · ' + esc(d.category_zh) + '</span>' : '')
+    + '<span class="tag">' + esc(d.language) + '</span><span class="tag">' + d.chars.toLocaleString('en-US') + ' chars</span>'
+    + (d.seconds != null ? '<span class="tag">' + sec(d.seconds) + '</span>' : '') + (d.aspect ? '<span class="tag">' + esc(d.aspect) + '</span>' : '')
+    + (d.needs_reference ? '<span class="tag">reference images 参考图</span>' : '')
+    + (d.prompt_source === 'reconstructed' ? '<span class="tag">reconstructed by apimodels.app 反推</span>' : '')
+    + '<span><a href="' + esc(d.author_url) + '" target="_blank" rel="noopener">' + esc(d.author) + '</a>' + (d.date ? ' · ' + d.date : '') + '</span>'
+    + (d.via ? '<span>found via <a href="' + esc(d.via.url) + '" target="_blank" rel="noopener">' + esc(d.via.name) + '</a></span>' : '') + '</div>'
+    + bs.map((x, i) => '<div class="blk">' + (bs.length > 1 ? '<p class="bl">' + esc(x.label) + '</p>' : '') + '<pre>' + esc(x.text) + '</pre><div class="acts"><button class="b primary" data-act="copy" data-i="' + i + '">Copy 复制</button></div></div>').join('')
+    + '<div class="acts">' + (long ? '<button class="b" data-act="toggle">Expand 展开</button>' : '')
+    + (MEDIA !== 'image' && d.video_url ? '<button class="b" data-act="play">Play clip 播放成片</button>' : '')
+    + '<a href="' + esc(d.url) + '" target="_blank" rel="noopener">Original post 原帖 →</a>'
+    + (d.video_url ? '<a href="' + esc(d.video_url) + '" target="_blank" rel="noopener">Clip file 成片文件 →</a>' : '')
+    + '<a href="' + REPO + '/blob/main/' + esc(d.page) + '" target="_blank" rel="noopener">Page 单页 →</a><a href="' + esc(d.gallery_url) + '" target="_blank" rel="noopener">apimodels.app →</a></div></div>';
+}
+function render() {
+  const out = DATA.filter(d => (st.c === 'all' || d.category === st.c) && (st.l === 'all' || d.language === st.l) && (st.s === 'all' || d.platform === st.s)
+    && (!st.q || [d.id, d.title_en, d.title_zh, d.text, ...(d.text_alt || []).map(t => t.text), d.author, d.category_en, d.category_zh].join(' ').toLowerCase().includes(st.q)));
+  $('#count').textContent = out.length + ' / ' + DATA.length;
+  $('#list').innerHTML = out.length ? out.slice(0, st.shown).map(card).join('') + (out.length > st.shown ? '<button class="b more" id="more-btn">Show more 显示更多 (' + (out.length - st.shown) + ')</button>' : '')
+    : '<p class="empty">No match 没有匹配的提示词</p>';
+}
+$('#theme').addEventListener('click', () => {
+  const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  r.dataset.theme = dark ? 'light' : 'dark';
+});
+fetch('data/prompts.json').then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(d => { DATA = d; init(); })
+  .catch(err => { $('#count').textContent = ''; $('#list').innerHTML = '<p class="empty">Could not load data/prompts.json (' + esc(err.message) + '). Open this page on GitHub Pages or through a local web server; browsers block it from a file:// address. 无法读取 data/prompts.json：请通过 GitHub Pages 或本地服务器打开本页。</p>'; });
+</script>
+</body>
+</html>
